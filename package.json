@@ -4,8 +4,8 @@
   "description": "",
   
   "scripts": {
-    "start":"parcel src/16thNov.html",
-    "build": "parcel build src/16thNov.html"
+    "start":"parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "author": "",
   "license": "ISC",
