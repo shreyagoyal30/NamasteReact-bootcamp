@@ -1,14 +1,11 @@
 import { useState } from "react";
- import data from "./Team-member.json";
 
-
-const searchNames=(searchText)=>{
-    return data.filter((res)=>
+const SearchBar = ({ user, setFilteredUser }) => {
+  const searchNames=(searchText)=>{
+    return user.filter((res)=>
         res.name.toLocaleLowerCase().includes(searchText.toLocaleLowerCase())
     );
 };
-
-const SearchBar = ({setFilteredNames}) => {
   const[searchText, setSearchText] = useState("Hello");
 
   return (
@@ -17,7 +14,7 @@ const SearchBar = ({setFilteredNames}) => {
         e.preventDefault();
         const filteredNames=searchNames(searchText);
         console.log(filteredNames);
-        setFilteredNames(filteredNames);
+        setFilteredUser(filteredNames);
       }}>
         <input
           id="name"
